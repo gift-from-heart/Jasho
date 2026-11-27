@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Kali ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff0f4;
+    color: #6b2945;
+    overflow-x: hidden;
+}
+
+:root {
+    --pink: #ff6b9a;
+    --dark: #7e294b;
+    --light: #fff0f4;
+}
+
+section {
+    padding: 85px 7%;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h2 {
+    font-size: clamp(30px, 6vw, 45px);
+    margin-bottom: 18px;
+}
+
+p {
+    line-height: 1.9;
+}
+
+/* Floating hearts */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 10;
+    animation: float 8s linear forwards;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Hero */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+    background:
+    radial-gradient(circle at top, #ffd1df, transparent 55%),
+    linear-gradient(135deg, #fff0f4, #ffd6e4);
+}
+
+.tag {
+    background: white;
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 10vw, 85px);
+    color: var(--dark);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--pink);
+    font-style: italic;
+}
+
+.hero p {
+    max-width: 520px;
+    margin: 20px auto;
+    font-size: 15px;
+}
+
+.main-photo {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    border: 9px solid white;
+    border-radius: 18px;
+    transform: rotate(-4deg);
+    box-shadow: 0 15px 40px #d68ca6;
+    margin: 25px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--pink);
+    color: white;
+    padding: 14px 27px;
+    border: none;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+    margin: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    background: var(--dark);
+}
+
+.btn.white {
+    background: white;
+    color: var(--dark);
+}
+
+/* Intro */
+
+.intro {
+    background: white;
+}
+
+.intro p {
+    max-width: 700px;
+    margin: auto;
+}
+
+/* Gallery */
+
+.gallery {
+    background: #fff0f4;
+}
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 950px;
+    margin: 40px auto;
+}
+
+.photo-card {
+    background: white;
+    padding: 12px 12px 22px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px #e7b6c8;
+    transition: .3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.photo-card p {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Love letter */
+
+.letter {
+    background: #ffe0e9;
+}
+
+.letter-box {
+    background: #fffdf8;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 35px #d99bad;
+    text-align: left;
+    line-height: 2;
+}
+
+.letter-box h3 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 25px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+/* Reasons */
+
+.reasons {
+    background: white;
+}
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.reason {
+    background: #fff0f4;
+    border-radius: 16px;
+    padding: 28px 15px;
+    transition: .3s;
+}
+
+.reason:hover {
+    transform: scale(1.04);
+}
+
+.reason .emoji {
+    font-size: 35px;
+}
+
+/* Secret messages */
+
+.secret {
+    background: linear-gradient(135deg, #9b365d, #e66d98);
+    color: white;
+}
+
+.secret h2 {
+    color: white;
+}
+
+.secret-card {
+    max-width: 550px;
+    min-height: 170px;
+    padding: 30px;
+    margin: 30px auto;
+    border: 1px solid #ffffff80;
+    border-radius: 20px;
+    background: #ffffff18;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secret-card p {
+    font-size: 17px;
+}
+
+/* Proposal */
+
+.proposal {
+    background: linear-gradient(135deg, #ffe2eb, #fff6f8);
+    min-height: 550px;
+}
+
+.proposal h2 {
+    color: var(--dark);
+}
+
+.proposal .big-heart {
+    font-size: 75px;
+    animation: beat 1.2s infinite;
+}
+
+@keyframes beat {
+    50% { transform: scale(1.2); }
+}
+
+#answer {
+    margin: 25px auto;
+    font-size: 18px;
+    min-height: 50px;
+    max-width: 550px;
+}
+
+/* Footer */
+
+footer {
+    padding: 35px 15px;
+    background: #762c4b;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media(max-width:700px) {
+    .photos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .photo-card img {
+        height: 180px;
+    }
+
+    .reason-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 65px 5%;
+    }
+
+    .letter-box {
+        padding: 27px 20px;
+    }
+}
+
+@media(max-width:380px) {
+    .photos, .reason-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="tag">A LITTLE WEBSITE MADE WITH LOVE ♡</div>
+
+    <h1>Hey, My <span>Kali</span> ❤️</h1>
+
+    <p>
+        Someone special deserves something special.
+        So I made this little corner of the internet
+        just for you, Jasho.
+    </p>
+
+    <img src="mayalu1.jpeg"
+         class="main-photo"
+         alt="My special person">
+
+    <h3>One girl. A thousand beautiful reasons. 💗</h3>
+
+    <a href="#story" class="btn">Open Your Surprise ↓</a>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="story">
+
+    <h2>Why This Website Exists 💌</h2>
+
+    <p>
+        Dear Jasho, you might wonder why I created
+        an entire website for you.
+
+        Well, because sometimes ordinary messages
+        aren't enough to express how much someone
+        means to us.
+
+        Every little section here carries a thought,
+        a memory, or a feeling.
+
+        This website isn't perfect, but every word
+        inside it was written especially for you.
+    </p>
+
+</section>
+
+
+<!-- PHOTO GALLERY -->
+
+<section class="gallery">
+
+    <h2>My Favourite Little Gallery 📸</h2>
+
+    <p>Five pictures, countless reasons to smile.</p>
+
+    <div class="photos">
+
+        <div class="photo-card">
+            <img src="mayalu1.jpeg" alt="Memory 1">
+            <p>My favourite smile 💗</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="mayalu2.jpeg" alt="Memory 2">
+            <p>A beautiful moment 🌷</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="mayalu3.jpeg" alt="Memory 3">
+            <p>Simply special ✨</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="mayalu4.jpeg" alt="Memory 4">
+            <p>My lovely Kali 🦋</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="mayalu5.jpeg" alt="Memory 5">
+            <p>A memory to keep 💞</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOVE LETTER -->
+
+<section class="letter">
+
+    <h2>A Letter For You 💌</h2>
+
+    <div class="letter-box">
+
+        <h3>Dear Jasho, ❤️</h3>
+
+        <p>
+            I don't know if I will ever find the perfect
+            words to explain how special you are to me.
+
+            But I want you to know something.
+
+            I appreciate your existence, your little
+            habits, your smile, your personality, and
+            all those small things that make you YOU.
+
+            I don't promise a perfect life or perfect
+            days. I promise to keep learning, growing,
+            understanding, and communicating with you.
+
+            I want us to celebrate the happy moments,
+            support each other through difficult ones,
+            and never stop appreciating the little things.
+
+            And Kali, if you ever forget how special
+            you are, come back to this page and read
+            these words again.
+
+            You matter. Always remember that. ❤️
+        </p>
+
+        <div class="signature">
+            With lots of love,<br>
+            Your Anurag 💗
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REASONS -->
+
+<section class="reasons">
+
+    <h2>6 Little Things I Adore About You</h2>
+
+    <div class="reason-grid">
+
+        <div class="reason">
+            <div class="emoji">😊</div>
+            <h3>Your Smile</h3>
+            <p>It makes ordinary moments special.</p>
+        </div>
+
+        <div class="reason">
+            <div class="emoji">🦋</div>
+            <h3>Your Personality</h3>
+            <p>There is something uniquely you about it.</p>
+        </div>
+
+        <div class="reason">
+            <div class="emoji">🌸</div>
+            <h3>Your Presence</h3>
+            <p>Even simple moments feel meaningful.</p>
+        </div>
+
+        <div class="reason">
+            <div class="emoji">💗</div>
+            <h3>Your Kindness</h3>
+            <p>The little things matter more than you know.</p>
+        </div>
+
+        <div class="reason">
+            <div class="emoji">✨</div>
+            <h3>Your Uniqueness</h3>
+            <p>There is only one Jasho in my world.</p>
+        </div>
+
+        <div class="reason">
+            <div class="emoji">♾️</div>
+            <h3>Our Memories</h3>
+            <p>Every good moment deserves to be remembered.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECRET MESSAGES -->
+
+<section class="secret">
+
+    <h2>🔐 Little Secrets For Kali</h2>
+
+    <p>There are some messages hidden in these buttons.</p>
+
+    <div class="secret-card">
+        <p id="secretMessage">
+            Click below to discover a little secret...
+        </p>
+    </div>
+
+    <button class="btn white" onclick="showSecret()">
+        Reveal A Secret 💌
+    </button>
+
+    <button class="btn white" onclick="anotherSecret()">
+        Another One 🥺
+    </button>
+
+</section>
+
+
+<!-- FINAL PROPOSAL -->
+
+<section class="proposal">
+
+    <div class="big-heart">❤️</div>
+
+    <h2>One Last Little Question...</h2>
+
+    <p>
+        Jasho, my Kali, will you keep making
+        beautiful memories with me?
+    </p>
+
+    <button class="btn" onclick="sayYes()">
+        YES, OF COURSE! 💗
+    </button>
+
+    <button class="btn white" onclick="sayMaybe()">
+        Let Me Think 🥺
+    </button>
+
+    <div id="answer"></div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>Made with ❤️ for Jasho</h3>
+
+    <p>Her name is Jasho. Her nickname is Kali.</p>
+
+    <p>Created by Anurag | A little corner of our story.</p>
+
+    <p>© 2026 | All the love in this little universe.</p>
+
+</footer>
+
+
+<script>
+
+/* Floating hearts */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = ["❤️","💗","💕","💖","🌸","🦋"];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 10000);
+
+}
+
+setInterval(createHeart, 650);
+
+
+/* Secret messages */
+
+const secrets = [
+
+    "Psst... Kali, you are one of my favourite reasons to smile. ❤️",
+
+    "If I could save one feeling forever, it would be the happiness of being with you. 💗",
+
+    "Your name has a special place in my little world. 🌷",
+
+    "Dear Jasho, never underestimate how much your little things matter. 🦋",
+
+    "My favourite notification? A message from you. 📱❤️",
+
+    "You don't need to be perfect to be precious. Just be yourself. 💌",
+
+    "Some people make life brighter without even trying. You are one of them. ✨",
+
+    "Hidden message: I am really glad our paths crossed. 💕",
+
+    "Kali, this whole website has one main character. YOU! 🌹"
+
+];
+
+let lastSecret = -1;
+
+function showSecret() {
+
+    let index;
+
+    do {
+        index = Math.floor(Math.random() * secrets.length);
+    } while (index === lastSecret);
+
+    lastSecret = index;
+
+    document.getElementById("secretMessage").innerText =
+        secrets[index];
+
+}
+
+function anotherSecret() {
+    showSecret();
+}
+
+
+/* Proposal */
+
+function sayYes() {
+
+    document.getElementById("answer").innerHTML =
+
+    "YAYYY! 💗🥹<br><br>" +
+    "A new memory unlocked!<br>" +
+    "Thank you for being part of my story, Kali. ❤️";
+
+    for(let i = 0; i < 15; i++) {
+        setTimeout(createHeart, i * 100);
+    }
+
+}
+
+function sayMaybe() {
+
+    document.getElementById("answer").innerHTML =
+
+    "Take your time, Kali. 🥺💗<br>" +
+    "No pressure. Your feelings matter.";
+
+}
+
+</script>
+
+</body>
+</html>
